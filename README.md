@@ -157,17 +157,17 @@ Feito isso, subimos nossa aplicação. A documentação fica disponivel no conte
 
 Outras anotações Swagger:
 
-@ApiImplicitParam	Representa um único parâmetro em uma operação da API.
+@ApiImplicitParam: Representa um único parâmetro em uma operação da API.
 
-@ApiImplicitParams	Um wrapper para permitir uma lista de vários objetos ApiImplicitParam.
+@ApiImplicitParams: Um wrapper para permitir uma lista de vários objetos ApiImplicitParam.
 
-@ApiResponse	Descreve uma possível resposta de uma operação.
+@ApiResponse: Descreve uma possível resposta de uma operação.
 
-@ApiResponses	Um wrapper para permitir uma lista de vários objetos ApiResponse.
+@ApiResponses: Um wrapper para permitir uma lista de vários objetos ApiResponse.
 
-@Autorização	Declara um esquema de autorização a ser usado em um recurso ou uma operação.
+@Autorização: Declara um esquema de autorização a ser usado em um recurso ou uma operação.
 
-@AuthorizationScope	Descreve um escopo de autorização do OAuth2.
+@AuthorizationScope: Descreve um escopo de autorização do OAuth2.
 
 
 
