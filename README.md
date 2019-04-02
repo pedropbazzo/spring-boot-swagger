@@ -150,6 +150,7 @@ Feito isso, subimos nossa aplicação. A documentação fica disponivel no conte
 
 ![swagger](https://user-images.githubusercontent.com/6553978/55373081-696f0d00-54da-11e9-8aaa-50e01282f1f6.png)
 
+----
 
 ![swagger2](https://user-images.githubusercontent.com/6553978/55373106-84da1800-54da-11e9-9dba-e4a58775725a.png)
 
