@@ -60,5 +60,80 @@ api() Cria a documentação
 
 apiInfo() Contem as informaçes da API, como descrição, criador e seus dados para contato, dadps de licença, etc..
 
+Crie duas classes, uma será nosso request e outra para expor nossos endpoints.
+
+PessoaDTO.java
+
+```
+@ApiModel(value = "Pessoa")
+public class PessoaDTO implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@ApiModelProperty(value = "Id da pessoa.", required = false)
+	private Integer id;
+
+	@ApiModelProperty(value = "Nome da pessoa.", required = true)
+	private String nome;
+
+	@ApiModelProperty(value = "Sobrenome da pessoa.", required = true)
+	private String sobreNome;
+
+	@ApiModelProperty(value = "Idade da pessoa.", required = true)
+	private Integer idade;
+
+	@ApiModelProperty(value = "Tamanho da pessoa.", required = false)
+	private Double tamanho;
+
+	@ApiModelProperty(value = "Peso da pessoa.", required = false)
+	private Double peso;
+	
+}
+```
+
+Controller
+
+```
+@Api(value="Pessoa API")
+@RestController
+@RequestMapping("v1/api")
+public class APISwaggerController {
+	
+	@ApiOperation(value="Consulta todas as pessoas do sistema", notes="Consulta síncrona.")
+	@GetMapping
+    public ResponseEntity pessoas() {
+        return ResponseEntity.status(HttpStatus.OK).body("Consulta de pessoas executada com sucesso!");
+    }
+	
+	@ApiOperation(value="Consulta o cliente por id existente no sistema", notes="Consulta síncrona.")
+    @GetMapping("/pessoas/{id}")
+    public ResponseEntity consultarPessoaPorId(@ApiParam(value="Id da pessoa") @PathVariable Long id) {
+        return  ResponseEntity.status(HttpStatus.OK).body("Consulta executada com sucesso! Id=" + id);
+    }
+	
+	@ApiOperation(value="Cria uma pessoa no sistema", notes="Consulta síncrona.")
+    @PostMapping
+    public ResponseEntity criarPessoa(@RequestBody PessoaDTO pessoaDTO) {
+        return ResponseEntity.status(HttpStatus.CREATED).body("Pessoa inserido com sucesso!");
+    }
+    
+	@ApiOperation(value="Deleta uma pessoa por id do sistema", notes="Consulta síncrona.")
+    @DeleteMapping("/pessoas/{id}")
+    public ResponseEntity deletarPessoa(@ApiParam(value="Id da pessoa") @PathVariable Long id) {
+        return ResponseEntity.status(HttpStatus.OK).body("Pessoa deletada com sucesso!");
+    }
+    
+	@ApiOperation(value="Atualiza uma pessoa do sistema", notes="Consulta síncrona.")
+    @PutMapping
+    public ResponseEntity deletarPessoa(@RequestBody PessoaDTO pessoaDTO) {
+        return ResponseEntity.status(HttpStatus.OK).body("Pessoa deletada com sucesso!");
+    }
+
+}
+```
+
 
 
