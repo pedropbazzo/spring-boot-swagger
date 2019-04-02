@@ -23,7 +23,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
-@ComponentScan("br.com.ars.apiusuario.controllers")
+@ComponentScan("br.com.ars.controllers")
 public class SwaggerConfig {
 
 	@Bean
@@ -38,7 +38,7 @@ public class SwaggerConfig {
 	 * @return
 	 */
 	private ApiInfo apiInfo() {
-		return new ApiInfo("API de funcionalidades do usuario", "Descrição da API de funcionalidades de usuario.", "API Usuario",
+		return new ApiInfo("API de funcionalidades de pessoa", "Descrição da API de funcionalidades de pessoa.", "API Pessoa",
 				"Termos de Serviço", new Contact("Adilson Silva", "www.ars.com.br", "adilson.ro.silva@gmail.com.br"),
 				"Licença da API", "Lincença da API URL", Collections.emptyList());
 	}
