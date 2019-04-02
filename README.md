@@ -148,10 +148,10 @@ public class APISwaggerController {
 
 Feito isso, subimos nossa aplicação. A documentação fica disponivel no contexto /swaggwe-ui.html, no nosso caso: http://localhost:8081/documentacao/swagger-ui.html.
 
-![]img/swagger.png
+![swagger](https://user-images.githubusercontent.com/6553978/55373081-696f0d00-54da-11e9-8aaa-50e01282f1f6.png)
 
 
-![]img/swagger2.png
+![swagger2](https://user-images.githubusercontent.com/6553978/55373106-84da1800-54da-11e9-9dba-e4a58775725a.png)
 
 
 
