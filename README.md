@@ -94,6 +94,11 @@ public class PessoaDTO implements Serializable {
 }
 ```
 
+@ApiModel: Serve para nomear a classe do modelo.
+
+@ApiModelProperty: Descrever uma propriedade dentro da classe modelo.
+
+
 Controller
 
 ```
@@ -134,6 +139,23 @@ public class APISwaggerController {
 
 }
 ```
+
+@Api: Utilizada para anotar a classe que cria uma API Rest
+
+@ApiOperation: Descreve uma operação ou um recurso HTTP
+
+@ApiParam: Representa um parâmetro de entrada em uma operação/recurso HTTP
+
+Feito isso, subimos nossa aplicação. A documentação fica disponivel no contexto /swaggwe-ui.html, no nosso caso: http://localhost:8081/documentacao/swagger-ui.html.
+
+![]img/swagger.png
+
+
+![]img/swagger2.png
+
+
+
+
 
 
 
