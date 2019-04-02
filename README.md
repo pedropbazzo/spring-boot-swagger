@@ -49,8 +49,11 @@ public class SwaggerConfig {
 }
 ```
 @Configurarion, responsavel por avisar ao Spring que esta classe e um novo Bean. 
+
 @EnableSwagger2, habilita o Swagger no nosso projeto.
+
 @ComponentScan, informa onde se encontra as classes que seram utilizadas para criação da documentação.
+
 @Bean, Indica que o metódo anotado deve ser gerenciado pelo Spring.
 
 api() Cria a documentação
